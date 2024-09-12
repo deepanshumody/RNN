@@ -5,7 +5,7 @@ The code contains 2 Graph Neural Network model architectures for metal ion bindi
 
 Following are the steps required to run it-
 
-## 1. Obtaining nonredundantRNA.txt (Already created in /home/kihara/modyd/Desktop/RNA_GNN_Metal_ion)
+## 1. Obtaining nonredundantRNA.txt
 To reproduce everything including which molecules to select for training, *clustering1.py, clustering2.py, clustering3.py, bestresolutionfromcluster.py* need to be run in the given order.
 
 This would require an input of comma separated list of all RNA only PDB IDs which is provided in *OnlyRNAlist.txt*. This list can also be obtained from RCSB PDB website by searching for RNA only structures.
@@ -14,7 +14,7 @@ Running the above will output a file *nonredundantRNA.txt* which contains a list
 
 These files have already been run and *nonredundantRNA.txt* contains a list of PDB IDs to train on but the above procedure can be followed to reproduce it. Hence, it is optional.
 
-## 2. Creating the dataset (Already created in /home/kihara/modyd/Desktop/RNA_GNN_Metal_ion)
+## 2. Creating the dataset
 Currently, a few versions of the dataset have been created. PDB structures of the RNA are required to be downloaded and saved in folder RNA-only-PDB in the working directory. The dataset will be created from these PDB files.
 
 Then *gnn_rna.py, gnn_rna_0A.py, gnn_rna_autodock.py, gnn_rna_morepos.py* can be used to create different versions of the dataset by choosing different locations to place the ions. For each PDB, a pickle file is generated containing all locations and the generated graphs and features. The GNN would work as a binary classifier for each location.
