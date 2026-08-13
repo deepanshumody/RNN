@@ -37,9 +37,6 @@ On the bundled 1FUF structure the Graph Convolutional Network achieves **ROC&nbs
 
 Locating ion sites is an **extreme class-imbalance** problem: on the bundled 1FUF structure only **1 of 1,484** candidate positions is a true Mg²⁺ site (≈ 0.07% positive). The GCN is therefore best read as a **ranker / filter** rather than a hard classifier, and is evaluated with imbalance-aware metrics rather than ROC AUC alone.
 
-<p align="center">
-  <img src="assets/roc_curve.png" alt="ROC curve for the GCN ion-binding classifier on 1FUF (AUC ≈ 0.95)" width="460">
-</p>
 
 | Metric — GCN on the 1FUF demo structure | Value | How to read it |
 | --- | --- | --- |
